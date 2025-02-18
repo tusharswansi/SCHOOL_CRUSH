@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ritu ❤</title>
+    <style>
+        body {
+            font-family:  sans-serif;
+            text-align: center;
+            background: url("C:\\Users\\lenovo\\Documents\\WhatsApp Image 2024-12-01 at 10.37.08_7c83909b.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        img {
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #555;
+        }
+        fieldset {
+            border: 5px dashed red;
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <h1><mark>THE MOST BEAUTIFUL GIRL THAT I HAVE EVER SEEN IN MY LIFE&#129535</mark></h1>
+    </fieldset>
+
+    <h1><i>Ritu&#128151</i></h1>
+
+    <div class="image-container">
+        <img id="sliderImage" src="C:\Users\lenovo\Nephophile\Nephophile\462990816_2642759585917460_4574149435438219048_n.jpg" alt="Slider Image">
+        <div class="buttons">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <br><br>
+
+    <legend><b>THIS IS FOR YOU:</b></legend> 
+    <audio controls>
+        <source src="C:\Users\lenovo\Music\Shayad Love Aaj Kal 320 Kbps.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <br><br>
+
+    <fieldset style="border:5px solid lightseagreen; background-color: beige;"> 
+         <ul>  
+                <LI>I  ALWAYS  WANTED  TO  CONFESS  MY  FEELING,  BUT  I'M  STILL  TOO  SCARED  TO  TALK  TO  YOU...</LI>
+                <BR>
+                <LI>YOU  ARE  THE  REASON  WHICH   MOTIVATE  ME  TO  HAVE  100%  ATTENDANCE  AND  PUT  MORE  EFFORT  IN  CLASS(ME THE PERSON WHO HATES GOING SCHOOL)STARTS  LOVING  SCHOOL  BECAUSE OF U..</LI>
+                <BR>
+                <LI>I  REMEMBER  WHENEVER  YOU  WERE  ABSENT  IN  SCHOOL, I REALISE  THAT  I  WOKE  UP  FOR  NO  REASON!!..</LI>
+                <br>
+                <LI> <B>"28TH OCTOBER 2008"</B> THIS DATE  WILL  BE  VERY  SPECIAL  FOR  ME..</LI>
+                <br>
+                <LI>"LITERALLY,  I  did't  believe  in  fairy  tales  until  i  met  you."</LI>
+                <br>
+                <LI>MY  LOVE  FOR  YOU  IS  SECRET,  I  WILL  CARRY  IT  ONESIDED...</LI>
+                <br>
+                <li>EVEN AFTER  KNOWING  U  WON'T  BE  MINE  &#128542  THE  1% HOPE  IS  STILL  THERE  IN  MY  HEART..&#128157</li>
+        </ul>
+    </fieldset>
+
+    <h3>"IT DOESN'T MATTER WE TALK OR NOT,THE PLACE I GAVE YOU IN MY HEART WILL ALWAYS REMAIN THE SAME"</h3>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imageLinks = [
+                "images\\465575233_873668244528329_5277443218446286984_n.jpg",
+                "images\\IMG_20240801_230324.jpg",
+                "images\\476776644_1950070178854094_5206606119518076378_n.jpg"
+            ];
+
+            let index = 0;
+            const imgElement = document.getElementById("sliderImage");
+
+            function nextImage() {
+                index = (index + 1) % imageLinks.length;
+                imgElement.src = imageLinks[index];
+            }
+
+            function prevImage() {
+                index = (index - 1 + imageLinks.length) % imageLinks.length;
+                imgElement.src = imageLinks[index];
+            }
+
+            document.getElementById("nextBtn").addEventListener("click", nextImage);
+            document.getElementById("prevBtn").addEventListener("click", prevImage);
+        });
+    </script>
+
+</body>
+</html>
