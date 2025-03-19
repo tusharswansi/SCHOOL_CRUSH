@@ -62,11 +62,11 @@
     <br><br>
 
     <legend><b>THIS IS FOR YOU:</b></legend> 
-    <audio controls>
+    <audio id="myAudio" controls>
         <source src="audio\Shayad Love Aaj Kal 320 Kbps.mp3" type="audio/mp3">
         Your browser does not support the audio element.
-    </audio>
-
+    </audio><br>
+<button  onclick="changeAudio()">CHANGE</button>
     <br><br>
 
     <fieldset style="border:5px solid lightseagreen; background-color: beige;"> 
@@ -90,6 +90,12 @@
     <h3>"IT DOESN'T MATTER WE TALK OR NOT,THE PLACE I GAVE YOU IN MY HEART WILL ALWAYS REMAIN THE SAME"</h3>
 
     <script>
+       function changeAudio() {
+            let audio = document.getElementById("myAudio");
+            audio.src= "audio\\kinna sona.mp3";
+            audio.load();
+            audio.play();}
+        
         document.addEventListener("DOMContentLoaded", function () {
             const imageLinks = [
                 "images\\465575233_873668244528329_5277443218446286984_n.jpg",
