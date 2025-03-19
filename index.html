@@ -6,6 +6,35 @@
     <title>For Rituu ❤️ | Nephophile🫧 </title>
     <meta name="description" content="This is a website made for ritu kumari🫧,to confess my feelings, that i couldn't tell her!">
     <style>
+        .title-box {
+    border: 5px solid rgba(255, 20, 147, 0.7); /* Pink glowing border */
+    background: linear-gradient(to right, rgba(255, 182, 193, 0.7), rgba(255, 105, 180, 0.5)); 
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 20, 147, 0.6); /* Soft glow effect */
+    animation: glow 2s infinite alternate;
+}
+
+.title-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493; /* Deep pink */
+    text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Glowing effect */
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px rgba(255, 20, 147, 0.5); }
+    100% { box-shadow: 0px 0px 20px rgba(255, 20, 147, 0.9); }
+}
+
+/* Heartbeat effect */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
         body {
             font-family:  sans-serif;
             text-align: center;
@@ -45,7 +74,7 @@
 </head>
 <body>
 
-    <fieldset>
+    <fieldset class="title-box">
         <h1><mark>THE MOST BEAUTIFUL GIRL THAT I HAVE EVER SEEN IN MY LIFE&#129535</mark></h1>
     </fieldset>
 
