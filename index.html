@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="" content="width=device-width, initial-scale=1.0">
+    <meta name="" content="width=device-width, initial-scale=1.0"/>
     <title>Ritu ❤ | Nephophile🫧</title>
-    <meta name="description" content="A heartfelt confession for Ritu Kumari🫧—the girl who unknowingly became the"> 
+    <meta property="og.title" content="Ritu ❤ | Nephophile🫧"
+    <meta name="description" content="A heartfelt confession for Ritu Kumari🫧—the girl who unknowingly became the most beautiful part of my life. This website holds my unsaid feelings, cherished memories, and the love I was too shy to express."/>
+    <meta name="keywords" content="Ritu, confession, love story, memories, unsaid feelings, special someone, heartfelt message"/>
+    <meta name="author" content="Nephophile"/>
     
-    
+
+  
+
     <style>
         .title-box {
     border: 5px solid rgba(255, 20, 147, 0.7); /* Pink glowing border */
@@ -72,9 +77,47 @@
             background-color: whitesmoke;
             padding: 10px;
         }
-    #heading{
-        font-family: monospace;
-    }
+        #hidden-diary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Centers the diary on the page */
+}
+
+.book-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: url('images\\diarycover.jpg') no-repeat center/cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: width 1s, height 1s; /* Smooth open animation */
+}
+
+.book-container.open {
+    width: 600px; /* Expands to show pages */
+    height: 400px;
+    background: none; /* Hides cover */
+}
+
+.book-pages {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('') no-repeat center/cover;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Cursive', sans-serif;
+    color: #333;
+}
+
+.book-container.open .book-pages {
+    display: block;
+}
     </style>
 </head>
 <body>
@@ -130,6 +173,19 @@
         </ul>
     </fieldset>
 
+    <section id="hidden-diary">
+        <h2>Unlock a Special Memory...</h2>
+        <div class="book-container" id="book">
+            <button class="close-btn" id="close">X</button>
+            <div class="book-pages">
+                <h2>For You, Ritu...</h2>
+                <p>Some memories aren't just written in ink but in the heart.</p>
+                <img src="images\IMG_20250316_124059.jpg" alt="Sketch of Ritu" class="sketch">
+            </div>
+        </div>
+        <audio id="flipSound" src="page-flip.mp3"></audio>
+    </section>
+
     <h3>"IT DOESN'T MATTER WE TALK OR NOT, THE PLACE I GAVE YOU IN MY HEART WILL ALWAYS REMAIN THE SAME"</h3>
     <CENTER><H2>...LOVE U IN EVERY UNIVERSE<<<<*3000 &#10084</H2></CENTER>
 
@@ -164,7 +220,21 @@
             document.getElementById("nextBtn").addEventListener("click", nextImage);
             document.getElementById("prevBtn").addEventListener("click", prevImage);
         });
-    </script>
+    
+    const book = document.getElementById('book');
+    const closeBtn = document.getElementById('close');
+    const flipSound = document.getElementById('flipSound');
+
+    book.addEventListener('click', function () {
+        book.classList.add('open');
+        flipSound.play();
+    });
+
+    closeBtn.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent reopening on close
+        book.classList.remove('open');
+    });
+</script>
 
 </body>
 </html>
